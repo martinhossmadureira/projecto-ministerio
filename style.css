@@ -1,0 +1,89 @@
+/* Reset Básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000; /* Fundo Preto */
+    color: #fff; /* Texto Branco */
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.cinzel-title { font-family: 'Cinzel', serif; letter-spacing: 2px; }
+
+/* Tela de Introdução */
+#intro-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+#bible-icon { width: 100px; filter: invert(1); margin-bottom: 20px; animation: float 3s infinite ease-in-out; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Conteúdo Principal */
+.hidden { display: none; }
+
+nav {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-family: 'Cinzel', serif; font-size: 2rem; border: 1px solid #fff; padding: 5px 15px; }
+
+ul { display: flex; list-style: none; gap: 30px; }
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.big-text {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+/* Versículo Aleatório */
+.verse-container {
+    max-width: 400px;
+    font-style: italic;
+    border-left: 2px solid #fff;
+    padding-left: 20px;
+    color: #ccc;
+}
+
+/* Letreiro Rodapé */
+.ticker-wrapper {
+    background: #fff;
+    color: #000;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
